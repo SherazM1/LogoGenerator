@@ -3,13 +3,13 @@ import streamlit as st
 import base64
 import urllib.parse
 
-st.title("Custom Email Signature Generator")
+st.title("Email Signature Generator")
 
 # User fields
 def get_base64_img(file):
     return base64.b64encode(file.read()).decode("utf-8")
 
-logo_file = st.file_uploader("Upload your company logo", type=["png", "jpg", "jpeg"])
+logo_file = st.file_uploader("Upload the company logo", type=["png", "jpg", "jpeg"])
 
 if logo_file is not None:
     # Detect file type for the correct MIME type in data URL
@@ -26,6 +26,9 @@ website = st.text_input("Website")
 address = st.text_input("Address")
 maps_url = f"https://maps.google.com/?q={urllib.parse.quote(address)}"
 phone = st.text_input("Phone Number")
+company_website = st.text_input("Company Website")
+website_url = st.text_input("Enter Website URL")
+tracking_pixel_url = st.text_input("Enter Pixel URL")
 
 # ... more fields as needed
 
@@ -38,7 +41,10 @@ fields = {
     "address": address,
     "phone": phone,
     "logo_url": logo_url,
-    "maps_url": maps_url
+    "maps_url": maps_url,
+    "company_website": company_website,
+    "website_url": website_url,
+    "tracking_pixel_url": tracking_pixel_url,
     
 }
 signature_html = EMAIL_SIGNATURE_TEMPLATE.format(**fields)
