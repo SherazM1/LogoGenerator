@@ -28,7 +28,6 @@ maps_url = f"https://maps.google.com/?q={urllib.parse.quote(address)}"
 phone = st.text_input("Phone Number")
 company_website = st.text_input("Company Website")
 website_url = st.text_input("Enter Website URL")
-tracking_pixel_url = st.text_input("Enter Pixel URL")
 
 # ... more fields as needed
 
@@ -44,7 +43,7 @@ fields = {
     "maps_url": maps_url,
     "company_website": company_website,
     "website_url": website_url,
-    "tracking_pixel_url": tracking_pixel_url,
+    
     
 }
 signature_html = EMAIL_SIGNATURE_TEMPLATE.format(**fields)

@@ -93,5 +93,4 @@ EMAIL_SIGNATURE_TEMPLATE = """
 </table>
 </div>
 <!-- Tracking pixel image (optional, can be removed) -->
-<img src="{tracking_pixel_url}" alt="__tpx__">
 """
