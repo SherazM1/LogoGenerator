@@ -4,6 +4,7 @@ import base64
 import urllib.parse
 
 st.title("Email Signature Generator")
+st.text("Hey: To use: Insert everything in the given fields, download the signature as an HTML, open it, copy and paste it into Outlook, and then if its underlined, highlight it and remove underlines. Should work for any and all signatures")
 
 # User fields
 def get_base64_img(file):
